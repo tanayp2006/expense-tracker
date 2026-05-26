@@ -11,15 +11,21 @@ A 3-day full-stack evaluation project with:
 
 ## Run the backend
 
-Copy and paste these exact commands from the repository root (`/Users/tanaypoddar/Desktop/expense-tracker`):
+From the project root, run these commands (paths are relative so they work anywhere):
 
 ```bash
-cd /Users/tanaypoddar/Desktop/expense-tracker
-python3 -m venv backend/.venv
-source backend/.venv/bin/activate
+# create a virtual environment in the project root and activate it
+python3 -m venv .venv
+source .venv/bin/activate
+
+# install backend dependencies
 pip install -r backend/requirements.txt
+
+# set your database URL in the same shell (example using PostgreSQL)
 export DATABASE_URL="postgresql://spendwise:spendwisepass@localhost:5432/spendwise_db"
-backend/.venv/bin/python -m uvicorn backend.main:app --host 127.0.0.1 --port 8000
+
+# start the backend (run from project root with the venv activated)
+python -m uvicorn backend.main:app --host 127.0.0.1 --port 8000
 ```
 
 Then verify the backend is running in a second terminal:
@@ -119,10 +125,10 @@ backend/.venv/bin/python -m uvicorn backend.main:app --host 127.0.0.1 --port 800
 
 ## Run the frontend
 
-Copy and paste these commands from the repository root (`/Users/tanaypoddar/Desktop/expense-tracker`):
+From the project root, run these commands (paths are relative so they work anywhere):
 
 ```bash
-cd /Users/tanaypoddar/Desktop/expense-tracker/frontend
+cd frontend
 npm install
 npm run dev
 ```

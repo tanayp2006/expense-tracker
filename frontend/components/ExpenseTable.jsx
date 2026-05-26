@@ -64,16 +64,16 @@ export default function ExpenseTable({
           </label>
         </div>
       </div>
-      <div className="max-h-64 overflow-y-auto">
-        <table className="min-w-full border-separate border-spacing-0 text-left">
-        <thead className="bg-slate-900 text-sm text-slate-100">
+      <div className="max-h-64 overflow-y-auto overflow-x-hidden">
+        <table className="w-full table-fixed border-separate border-spacing-0 text-left">
+        <thead>
           <tr>
-            <th className="px-4 py-4">Title</th>
-            <th className="px-4 py-4">Category</th>
-            <th className="px-4 py-4">Amount</th>
-            <th className="px-4 py-4">Date</th>
-            <th className="px-4 py-4">Description</th>
-            <th className="px-4 py-4">Actions</th>
+            <th className="px-4 py-4 sticky top-0 z-10 break-words bg-black text-white text-sm dark:bg-slate-900 dark:text-slate-100">Title</th>
+            <th className="px-4 py-4 sticky top-0 z-10 break-words bg-black text-white text-sm dark:bg-slate-900 dark:text-slate-100">Category</th>
+            <th className="px-4 py-4 sticky top-0 z-10 break-words bg-black text-white text-sm dark:bg-slate-900 dark:text-slate-100">Amount</th>
+            <th className="px-4 py-4 sticky top-0 z-10 break-words bg-black text-white text-sm dark:bg-slate-900 dark:text-slate-100">Date</th>
+            <th className="px-4 py-4 sticky top-0 z-10 break-words bg-black text-white text-sm dark:bg-slate-900 dark:text-slate-100">Description</th>
+            <th className="px-4 py-4 sticky top-0 z-10 break-words bg-black text-white text-sm dark:bg-slate-900 dark:text-slate-100">Actions</th>
           </tr>
         </thead>
         <tbody>
@@ -92,11 +92,11 @@ export default function ExpenseTable({
           ) : (
             filteredExpenses.flatMap((expense) => [
               <tr key={expense.id} className="border-t border-slate-200 bg-white hover:bg-slate-50 dark:border-slate-700 dark:bg-slate-800 dark:hover:bg-slate-700">
-                <td className="px-4 py-4 text-sm text-slate-800 dark:text-slate-100">{expense.title}</td>
-                <td className="px-4 py-4 text-sm text-slate-600 dark:text-slate-300">{expense.category}</td>
-                <td className="px-4 py-4 text-sm font-semibold text-slate-900 dark:text-slate-50">${expense.amount.toFixed(2)}</td>
-                <td className="px-4 py-4 text-sm text-slate-600 dark:text-slate-300">{expense.date}</td>
-                <td className="px-4 py-4 text-sm text-slate-600 dark:text-slate-300">
+                <td className="px-4 py-4 break-words text-sm text-slate-800 dark:text-slate-100">{expense.title}</td>
+                <td className="px-4 py-4 break-words text-sm text-slate-600 dark:text-slate-300">{expense.category}</td>
+                <td className="px-4 py-4 break-words text-sm font-semibold text-slate-900 dark:text-slate-50">${expense.amount.toFixed(2)}</td>
+                <td className="px-4 py-4 break-words text-sm text-slate-600 dark:text-slate-300">{expense.date}</td>
+                <td className="px-4 py-4 break-words text-sm text-slate-600 dark:text-slate-300">
                   {expense.description ? (
                     <button
                       type="button"

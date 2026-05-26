@@ -42,6 +42,13 @@ export default function HomePage() {
     }
   });
 
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    // mark component as mounted so theme-dependent UI only renders on client
+    setMounted(true);
+  }, []);
+
   useLayoutEffect(() => {
     try {
       if (theme === "dark") {
@@ -254,7 +261,7 @@ export default function HomePage() {
                 onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
                 className="rounded-2xl border border-slate-200 bg-white px-3 py-2 text-sm text-slate-900 hover:bg-slate-50 dark:bg-slate-800 dark:text-slate-100 dark:border-slate-700"
               >
-                {theme === "dark" ? "🌙 Dark" : "☀️ Light"}
+                {mounted ? (theme === "dark" ? "🌙 Dark" : "☀️ Light") : null}
               </button>
             </div>
           </div>
@@ -318,13 +325,13 @@ export default function HomePage() {
                       className="ml-2 inline-flex w-28 rounded-2xl border border-slate-200 bg-white px-3 py-2 text-sm text-slate-900 outline-none dark:bg-slate-700 dark:border-slate-700 dark:text-slate-100"
                     />
                   </div>
-                  {monthlyTotal > monthlyLimit ? (
-                    <div className="rounded-2xl bg-rose-50 px-4 py-2 text-sm font-semibold text-rose-700 ring-1 ring-rose-200">
-                      Budget Alert: You have exceeded your monthly limit!
-                    </div>
-                  ) : null}
                 </div>
               </div>
+              {monthlyTotal > monthlyLimit ? (
+                <div className="rounded-2xl bg-rose-50 px-4 py-3 text-sm font-semibold text-rose-700 ring-1 ring-rose-200 dark:bg-rose-900 dark:text-rose-200 dark:ring-rose-700">
+                  Budget Alert: You have exceeded your monthly limit!
+                </div>
+              ) : null}
 
               <Charts summary={summaryByCategory.length ? summaryByCategory : summary} />
             </section>

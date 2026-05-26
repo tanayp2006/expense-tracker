@@ -64,8 +64,12 @@ export default function Charts({ summary }) {
               <CartesianGrid strokeDasharray="3 3" stroke={isDark ? "#334155" : undefined} />
               <XAxis dataKey="category" stroke={isDark ? "#94a3b8" : undefined} tick={{ fill: isDark ? "#cbd5e1" : undefined }} />
               <YAxis stroke={isDark ? "#94a3b8" : undefined} tick={{ fill: isDark ? "#cbd5e1" : undefined }} />
-              <ReTooltip formatter={(value) => `$${Number(value).toFixed(2)}`} contentStyle={{ backgroundColor: isDark ? "#0f172a" : "#fff", borderColor: isDark ? "#334155" : "#e5e7eb", color: isDark ? "#cbd5e1" : "#111827" }} />
-              <Bar dataKey="total" fill="#6366F1" cursor={{ fill: isDark ? '#0b1220' : '#f3f4f6' }} />
+              <ReTooltip formatter={(value) => `$${Number(value).toFixed(2)}`} contentStyle={{ backgroundColor: isDark ? "#0f172a" : "#fff", borderColor: isDark ? "#334155" : "#e5e7eb", color: isDark ? "#cbd5e1" : "#111827" }} cursor={{ fill: isDark ? '#2b316153' : '#a6aab24f' }} />
+              <Bar
+                dataKey="total"
+                fill="#6366F1"
+                activeFill={isDark ? '#1e293b' : '#60a5fa'}
+              />
             </BarChart>
           </ResponsiveContainer>
         </div>

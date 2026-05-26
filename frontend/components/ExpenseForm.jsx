@@ -101,14 +101,14 @@ export default function ExpenseForm({ onCreate, onUpdate, onCancel, submitting, 
   return (
     <form onSubmit={handleSubmit} className="mt-6 space-y-4">
       {formError ? (
-        <div className="rounded-2xl bg-rose-50 px-4 py-3 text-sm text-rose-700 ring-1 ring-rose-200">
+        <div className="rounded-2xl bg-rose-50 px-4 py-3 text-sm text-rose-700 ring-1 ring-rose-200 dark:bg-rose-900 dark:text-rose-200 dark:ring-rose-700">
           {formError}
         </div>
       ) : null}
 
       <div className="grid gap-4 sm:grid-cols-2">
         <label className="block">
-          <span className="text-sm font-medium text-slate-700">Title</span>
+          <span className="text-sm font-medium text-slate-700 dark:text-slate-300">Title</span>
           <input
             type="text"
             value={title}
@@ -119,7 +119,7 @@ export default function ExpenseForm({ onCreate, onUpdate, onCancel, submitting, 
         </label>
 
         <label className="block">
-          <span className="text-sm font-medium text-slate-700">Amount</span>
+          <span className="text-sm font-medium text-slate-700 dark:text-slate-300">Amount</span>
           <input
             type="number"
             step="0.01"
@@ -133,7 +133,7 @@ export default function ExpenseForm({ onCreate, onUpdate, onCancel, submitting, 
 
       <div className="grid gap-4 sm:grid-cols-2">
         <label className="block">
-          <span className="text-sm font-medium text-slate-700">Category</span>
+          <span className="text-sm font-medium text-slate-700 dark:text-slate-300">Category</span>
           <select
             value={category}
             onChange={(e) => setCategory(e.target.value)}
@@ -148,7 +148,7 @@ export default function ExpenseForm({ onCreate, onUpdate, onCancel, submitting, 
         </label>
 
         <label className="block">
-          <span className="text-sm font-medium text-slate-700">Date</span>
+          <span className="text-sm font-medium text-slate-700 dark:text-slate-300">Date</span>
           <input
             type="date"
             value={date}
@@ -159,7 +159,7 @@ export default function ExpenseForm({ onCreate, onUpdate, onCancel, submitting, 
       </div>
 
       <label className="block">
-        <span className="text-sm font-medium text-slate-700">Description</span>
+        <span className="text-sm font-medium text-slate-700 dark:text-slate-300">Description</span>
         <textarea
           value={description}
           onChange={(e) => setDescription(e.target.value)}
@@ -181,7 +181,7 @@ export default function ExpenseForm({ onCreate, onUpdate, onCancel, submitting, 
           <button
             type="button"
             onClick={onCancel}
-            className="inline-flex items-center justify-center rounded-2xl border border-slate-200 bg-white px-5 py-3 text-sm font-semibold text-slate-900 transition hover:bg-slate-50"
+            className="inline-flex items-center justify-center rounded-2xl border border-slate-200 bg-white px-5 py-3 text-sm font-semibold text-slate-900 transition hover:bg-slate-50 dark:border-slate-700 dark:bg-slate-700 dark:text-slate-100 dark:hover:bg-slate-600"
           >
             Cancel edit
           </button>
