@@ -14,7 +14,7 @@ app = FastAPI(title="SmartSpend Backend")
 origins = [
     "http://localhost:3000",
     "http://127.0.0.1:3000",
-    "https://expense-tracker-liard-beta.vercel.app/"
+    "https://expense-tracker-liard-beta.vercel.app"
 ]
 
 app.add_middleware(
