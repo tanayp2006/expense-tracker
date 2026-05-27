@@ -11,11 +11,10 @@ from .database import Base, SessionLocal, engine
 
 app = FastAPI(title="SmartSpend Backend")
 
-# Change your origins array to use a wildcard string
 origins = [
     "http://localhost:3000",
     "http://127.0.0.1:3000",
-    "https://expense-tracker-e1sh23zf9-tanay-poddar-s-projects.vercel.app/"  
+    "https://expense-tracker-liard-beta.vercel.app/"
 ]
 
 app.add_middleware(
