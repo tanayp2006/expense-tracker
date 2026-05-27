@@ -5,7 +5,7 @@ import ExpenseForm from "../components/ExpenseForm";
 import ExpenseTable from "../components/ExpenseTable";
 import Charts from "../components/Charts";
 
-const API_BASE = "http://localhost:8000";
+const API_BASE = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
 
 export default function HomePage() {
   const [expenses, setExpenses] = useState([]);
