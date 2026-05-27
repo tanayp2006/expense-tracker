@@ -12,15 +12,11 @@ from .database import Base, SessionLocal, engine
 app = FastAPI(title="SmartSpend Backend")
 
 # Change your origins array to use a wildcard string
-origins = ["*"]
-
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=origins,
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
+origins = [
+    "http://localhost:3000",
+    "http://127.0.0.1:3000",
+    "https://expense-tracker-e1sh23zf9-tanay-poddar-s-projects.vercel.app/"  
+]
 
 app.add_middleware(
     CORSMiddleware,
