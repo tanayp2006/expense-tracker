@@ -25,6 +25,53 @@ This project demonstrates a production-style full-stack architecture using:
 
 ---
 
+# 📸 UI Preview
+
+### 📊 Main Dashboards (Toggleable Themes)
+The application includes a fully responsive interface equipped with global state management for dynamic theme toggling. Users can switch seamlessly between Light and Dark modes depending on environment preference with design states persisting cleanly across layout shifts without jarring layout flashes.
+
+| Light Mode | Dark Mode |
+|---|---|
+| <img src="./images/Dashboard_Light Mode.png" width="450" alt="Dashboard Light Mode"/> | <img src="./images/Dashboard_Dark Mode.png" width="450" alt="Dashboard Dark Mode"/> |
+
+---
+
+### 📥 Add New Expense
+The creation form utilizes structured, context-aware input elements to capture transaction metadata. Fields include automated client-side validation for numeric amounts, category selectors and explicit date tracking inputs, packaging the dataset into a standard schema structure ready for backend serialization.
+
+<p align="center">
+  <img src="./images/Add Expense.png" width="450" alt="Add Expense Component"/>
+</p>
+
+---
+
+### 🛠️ Expense Analytical Charts
+Data visualization is driven by asynchronous state triggers mapped directly to a FastAPI analytics router. The Recharts implementation translates structural transaction lists into interactive donut and bar graphs, providing users with an instant visual breakdown of categorical metrics against target budget ceilings.
+
+<p align="center">
+  <img src="./images/Expense Charts.png" width="750" alt="Expense Charts Analytics"/>
+</p>
+
+---
+
+### 🧾 Recent Expenses Table
+A centralized data ledger rendering live operational records directly from your cloud PostgreSQL instance. The table handles strict layout positioning while mapping integrated management controls directly to each transaction row allowing users to apply custom filters, invoke item-level deletion requests or select records to launch the inline editing configuration.
+
+<p align="center">
+  <img src="./images/Recent Expenses Table.png" width="750" alt="Recent Expenses Data Table"/>
+</p>
+
+---
+
+### 📝 Edit Expense
+When triggered from the data table, the edit component loads the historical expense record into an interactive, pre-populated transactional field context. This module securely isolates modified fields, coordinates validation rules for adjusted properties, and dispatches a clean `PUT` update down to the application api layers.
+
+<p align="center">
+  <img src="./images/Edit Expense.png" width="450" alt="Edit Expense Component"/>
+</p>
+
+---
+
 # 🛠️ Tech Stack
 
 | Layer | Technology |
