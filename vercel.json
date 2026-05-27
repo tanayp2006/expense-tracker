@@ -1,0 +1,6 @@
+{
+  "version": 2,
+  "public": false,
+  "buildCommand": "cd frontend && npm run build",
+  "outputDirectory": "frontend/.next"
+}
