@@ -1,5 +1,5 @@
 {
-  "name": "spendwise-frontend",
+  "name": "smartspend-frontend",
   "private": true,
   "scripts": {
     "dev": "next dev",

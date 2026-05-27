@@ -244,7 +244,7 @@ export default function HomePage() {
         <div className="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm dark:border-slate-700 dark:bg-slate-800">
           <div className="mb-6 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
             <div>
-              <p className="text-sm uppercase tracking-[0.25em] text-slate-500 dark:text-slate-400">SpendWise</p>
+              <p className="text-sm uppercase tracking-[0.25em] text-slate-500 dark:text-slate-400">SmartSpend</p>
               <h1 className="mt-3 text-3xl font-semibold tracking-tight text-slate-900 dark:text-slate-50 sm:text-4xl">
                 Expense dashboard
               </h1>

@@ -9,7 +9,7 @@ from sqlalchemy.orm import Session
 from . import models, schemas
 from .database import Base, SessionLocal, engine
 
-app = FastAPI(title="SpendWise Backend")
+app = FastAPI(title="SmartSpend Backend")
 
 origins = [
     "http://localhost:3000",

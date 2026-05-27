@@ -1,8 +1,8 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "SpendWise",
-  description: "Expense tracker dashboard with FastAPI backend",
+  title: "SmartSpend",
+  description: "SmartSpend — Expense tracker dashboard with FastAPI backend",
 };
 
 export default function RootLayout({ children }) {
